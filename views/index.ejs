@@ -1,0 +1,102 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <h1>Hello,Welcome to your TO-DO List app</h1>
+   <h2><%=new Date().toLocaleString('en-us',{weekday:'long',day:'numeric',month:'long'})%></h2>
+
+  
+  <div class="container1">
+  
+       <form action="/today" method="POST">
+          <input type="text" name="task" placeholder="write your task here">
+          <input type="today" value="ADD">
+           </form>
+          
+          
+            
+            <% for(var i = 0; i < listItems.length; i++){ %>
+            <div class="container2">
+              <input type="checkbox"class="cbox1">
+                  <div class="list">
+                  <p class="strikeThis">
+                    <%= listItems[i] %>
+                  </p>
+              
+             
+              </div>
+              
+              
+            </div>
+            <% } %>
+
+  
+              
+             
+         
+        
+       
+</div>
+
+</div>
+</html>
+
+ 
+
+
+
+   
+ 
+</body>
+</html>
+
+ 
+
+  
+
+   
+    
+
+
+
+      
+
+
+    
+
+   
+   
+
+     
+
+
+   
+
+ <%# <div class="container themed-container text-center"> %>
+    
+ <%# </div> %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <%- include("partials/footer.ejs") %>
+   
